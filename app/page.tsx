@@ -4,10 +4,11 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Package, Settings, TrendingUp, ChefHat, Bell } from "lucide-react"
+import { Package, Settings, TrendingUp, ChefHat, Bell, Database } from "lucide-react"
 import { OrdersDashboard } from "@/components/orders-dashboard"
 import { SalesDashboard } from "@/components/sales-dashboard"
 import { ConfigurationPanel } from "@/components/configuration-panel"
+import { MongoDBDashboard } from "@/components/mongodb-dashboard"
 
 export default function RestaurantManagement() {
   const [activeTab, setActiveTab] = useState("orders")
@@ -41,7 +42,7 @@ export default function RestaurantManagement() {
 
       <div className="container mx-auto px-4 py-6">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-          <TabsList className="grid w-full grid-cols-3 lg:w-[600px] mx-auto">
+          <TabsList className="grid w-full grid-cols-4 lg:w-[800px] mx-auto">
             <TabsTrigger value="orders" className="flex items-center gap-2">
               <Package className="h-4 w-4" />
               Órdenes Entrantes
@@ -49,6 +50,10 @@ export default function RestaurantManagement() {
             <TabsTrigger value="sales" className="flex items-center gap-2">
               <TrendingUp className="h-4 w-4" />
               Ventas del Día
+            </TabsTrigger>
+            <TabsTrigger value="mongodb" className="flex items-center gap-2">
+              <Database className="h-4 w-4" />
+              MongoDB
             </TabsTrigger>
             <TabsTrigger value="config" className="flex items-center gap-2">
               <Settings className="h-4 w-4" />
@@ -62,6 +67,10 @@ export default function RestaurantManagement() {
 
           <TabsContent value="sales" className="space-y-6">
             <SalesDashboard />
+          </TabsContent>
+
+          <TabsContent value="mongodb" className="space-y-6">
+            <MongoDBDashboard />
           </TabsContent>
 
           <TabsContent value="config" className="space-y-6">
