@@ -71,7 +71,7 @@ export function SalesDashboard() {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Ingresos del Día</p>
-                <p className="text-2xl font-bold text-primary">€{totalSales.toFixed(2)}</p>
+                <p className="text-2xl font-bold text-primary">S/.{totalSales.toFixed(2)}</p>
                 <div className="flex items-center gap-1 mt-1">
                   <TrendingUp className="h-3 w-3 text-green-600" />
                   <span className="text-xs text-green-600">+12.5%</span>
@@ -107,7 +107,7 @@ export function SalesDashboard() {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Ticket Promedio</p>
-                <p className="text-2xl font-bold">€{averageOrderValue.toFixed(2)}</p>
+                <p className="text-2xl font-bold">S/.{averageOrderValue.toFixed(2)}</p>
                 <div className="flex items-center gap-1 mt-1">
                   <TrendingUp className="h-3 w-3 text-green-600" />
                   <span className="text-xs text-green-600">+3.7%</span>
@@ -126,7 +126,7 @@ export function SalesDashboard() {
               <div>
                 <p className="text-sm text-muted-foreground">Hora Pico</p>
                 <p className="text-2xl font-bold">{peakHour.hour}</p>
-                <p className="text-xs text-muted-foreground">€{peakHour.ventas} en ventas</p>
+                <p className="text-xs text-muted-foreground">S/.{peakHour.ventas} en ventas</p>
               </div>
             </div>
           </CardContent>
@@ -249,7 +249,7 @@ export function SalesDashboard() {
             <div>
               <div className="flex justify-between text-sm mb-2">
                 <span>Objetivo Diario</span>
-                <span className="font-medium">€{totalSales.toFixed(0)} / €5000</span>
+                <span className="font-medium">S/.{totalSales.toFixed(0)} / S/.5000</span>
               </div>
               <Progress value={(totalSales / 5000) * 100} className="h-2" />
               <p className="text-xs text-muted-foreground mt-1">{((totalSales / 5000) * 100).toFixed(1)}% completado</p>

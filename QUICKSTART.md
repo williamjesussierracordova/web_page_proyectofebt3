@@ -26,7 +26,7 @@ MONGODB_DB_NAME=restaurante_db
 - `<password>` con tu contraseña
 - `cluster0.xxxxx.mongodb.net` con tu URL de cluster
 
-### 3. Verificar Instalación
+### 2. Verificar Instalación
 
 La dependencia de MongoDB ya está instalada. Verifica que esté en `package.json`:
 
@@ -38,7 +38,7 @@ La dependencia de MongoDB ya está instalada. Verifica que esté en `package.jso
 }
 ```
 
-### 4. Probar la Conexión
+### 3. Iniciar el Servidor
 
 Inicia el servidor de desarrollo:
 
@@ -46,12 +46,22 @@ Inicia el servidor de desarrollo:
 npm run dev
 ```
 
-Prueba el endpoint de bots en tu navegador o Postman:
+### 4. Verificar la Conexión
+
+Deberías ver en la consola del servidor:
+
 ```
-http://localhost:3000/api/bots
+✅ MongoDB conectado exitosamente
+📍 Tipo de conexión: LOCAL  (o REMOTA si usas Atlas)
+📦 Base de datos: restaurante_db
 ```
 
-Si ves `{"success":true,"data":[]}`, ¡la conexión funciona! ✅
+Prueba el endpoint de health en tu navegador:
+```
+http://localhost:3000/api/health
+```
+
+Si ves `{"success":true,"status":"connected",...}`, ¡la conexión funciona! ✅
 
 ---
 

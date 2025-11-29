@@ -6,7 +6,8 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "mongodb:check": "node scripts/verificar-mongodb.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

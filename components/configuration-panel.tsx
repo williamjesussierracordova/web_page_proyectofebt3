@@ -231,7 +231,7 @@ export function ConfigurationPanel() {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="min-order">Pedido Mínimo (€)</Label>
+                    <Label htmlFor="min-order">Pedido Mínimo (S/.)</Label>
                     <Input
                       id="min-order"
                       type="number"
@@ -241,7 +241,7 @@ export function ConfigurationPanel() {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="delivery-fee">Coste de Envío (€)</Label>
+                    <Label htmlFor="delivery-fee">Coste de Envío (S/.)</Label>
                     <Input
                       id="delivery-fee"
                       type="number"
@@ -322,7 +322,7 @@ export function ConfigurationPanel() {
                     onChange={(e) => setNewItem({ ...newItem, name: e.target.value })}
                   />
                   <Input
-                    placeholder="Precio (€)"
+                    placeholder="Precio (S/.)"
                     type="number"
                     step="0.1"
                     value={newItem.price || ""}
@@ -393,7 +393,7 @@ export function ConfigurationPanel() {
                           </div>
                           <p className="text-sm text-muted-foreground">{item.description}</p>
                           <div className="flex items-center gap-4 mt-1 text-sm">
-                            <span className="font-medium text-primary">€{item.price.toFixed(2)}</span>
+                            <span className="font-medium text-primary">S/.{item.price.toFixed(2)}</span>
                             <span className="text-muted-foreground">{item.preparationTime} min</span>
                           </div>
                         </div>

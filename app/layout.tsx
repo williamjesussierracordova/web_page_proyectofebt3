@@ -8,9 +8,13 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "Restaurant Agent",
+  description: "Restaurant agent powered by AI and MongoDB",
+  generator: "Next.js",
+  icons: {
+    icon: '/asterisk.svg', // Ícono principal usando tu SVG
+    shortcut: '/asterisk.svg',
+  },
 }
 
 export default function RootLayout({

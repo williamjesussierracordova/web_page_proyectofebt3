@@ -128,7 +128,7 @@ export function OrdersDashboard() {
         // Show notification for new order
         toast({
           title: "¡Nuevo Pedido!",
-          description: `${newOrder.customerName} - €${newOrder.total.toFixed(2)}`,
+          description: `${newOrder.customerName} - S/.${newOrder.total.toFixed(2)}`,
           duration: 5000,
         })
 
@@ -349,12 +349,12 @@ export function OrdersDashboard() {
                     <span>
                       {item.quantity}x {item.name}
                     </span>
-                    <span className="font-medium">€{(item.quantity * item.price).toFixed(2)}</span>
+                    <span className="font-medium">S/.{(item.quantity * item.price).toFixed(2)}</span>
                   </div>
                 ))}
                 <div className="border-t pt-2 flex justify-between font-bold">
                   <span>Total:</span>
-                  <span className="text-primary">€{order.total.toFixed(2)}</span>
+                  <span className="text-primary">S/.{order.total.toFixed(2)}</span>
                 </div>
               </div>
 
